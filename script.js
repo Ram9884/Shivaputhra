@@ -192,23 +192,43 @@ function bookFleetVehicle(vehicleName) {
 }
 
 // 10. Automatic 1.5-second Hero Background Slider
-// Synchronized 1.5-Second Hero Image & Content Slider
-// Synchronized 1.5-Second Hero Image & Content Slider (4 Items)
-// Synchronized 2-Second Hero Image & Content Slider
+// Synchronized 3-Second Hero Image & Content Slider with Dot Navigation
 let currentSlideIndex = 0;
+let slideInterval = null;
 const slides = document.querySelectorAll('.hero-slide');
 const textBlocks = document.querySelectorAll('.hero-text-block');
+const heroDots = document.querySelectorAll('.hero-dot');
+
+function goToSlide(index) {
+  if (slides.length === 0 || textBlocks.length === 0) return;
+  
+  slides[currentSlideIndex].classList.remove('active-slide');
+  textBlocks[currentSlideIndex].classList.remove('active-text');
+  if (heroDots.length > currentSlideIndex) {
+    heroDots[currentSlideIndex].classList.remove('active');
+  }
+
+  currentSlideIndex = index;
+
+  slides[currentSlideIndex].classList.add('active-slide');
+  textBlocks[currentSlideIndex].classList.add('active-text');
+  if (heroDots.length > currentSlideIndex) {
+    heroDots[currentSlideIndex].classList.add('active');
+  }
+
+  startSlideTimer();
+}
+
+function startSlideTimer() {
+  if (slideInterval) clearInterval(slideInterval);
+  slideInterval = setInterval(() => {
+    let nextIndex = (currentSlideIndex + 1) % slides.length;
+    goToSlide(nextIndex);
+  }, 3000); // 3 seconds (3000ms) autoplay
+}
 
 if (slides.length > 0 && textBlocks.length > 0) {
-  setInterval(() => {
-    slides[currentSlideIndex].classList.remove('active-slide');
-    textBlocks[currentSlideIndex].classList.remove('active-text');
-
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-
-    slides[currentSlideIndex].classList.add('active-slide');
-    textBlocks[currentSlideIndex].classList.add('active-text');
-  }, 2000); // Changed to 2 seconds (2000ms)
+  startSlideTimer();
 }
 
 // Mobile Side-Drawer Menu Handlers
