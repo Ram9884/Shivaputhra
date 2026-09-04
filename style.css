@@ -291,16 +291,25 @@
     border-color: var(--accent);
     box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
   }
+  /* Phone icon site-wide left-to-right direction */
+  .fa-phone,
+  .fa-phone-alt,
+  .fa-phone-flip,
+  .fa-phone-volume {
+    display: inline-block;
+    transform: scaleX(-1) rotate(0deg) !important;
+  }
+
   .btn-nav-call i,
   .mobile-fab-call i {
     display: inline-block;
-    transform: rotate(90deg);
+    transform: scaleX(-1) rotate(0deg) !important;
     transition: transform 0.25s ease;
   }
   .btn-nav-call:hover i,
   .mobile-fab-call:hover i {
     color: #ffffff !important;
-    transform: rotate(110deg) scale(1.1);
+    transform: scaleX(-1) scale(1.1) !important;
   }
 
   .btn-nav-whatsapp {
@@ -2203,19 +2212,31 @@
   color: var(--accent);
 }
 
-/* Mobile Drawer Submenu */
+/* Mobile Drawer Submenu - Hidden until Hover or Click */
 .drawer-item-dropdown {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .drawer-submenu {
   list-style: none;
-  display: flex;
+  display: none; /* Hidden by default */
   flex-direction: column;
   gap: 4px;
   padding-left: 28px;
-  margin-top: 4px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.drawer-item-dropdown:hover .drawer-submenu,
+.drawer-item-dropdown.open .drawer-submenu {
+  display: flex !important;
+}
+
+.drawer-item-dropdown:hover .drawer-chevron,
+.drawer-item-dropdown.open .drawer-chevron {
+  transform: rotate(180deg);
 }
 
 .drawer-submenu a {

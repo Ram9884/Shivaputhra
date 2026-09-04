@@ -226,6 +226,17 @@ function toggleMobileMenu(isOpen) {
   }
 }
 
+function toggleMobileSubmenu(e) {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  const dropdown = document.getElementById('drawer-dropdown-item');
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+  }
+}
+
 function handleDrawerNav(pageId) {
   toggleMobileMenu(false);
   showPage(pageId);

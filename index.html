@@ -86,9 +86,13 @@
 
     <ul class="drawer-links">
       <li><a onclick="handleDrawerNav('home')" id="drawer-home" class="active"><i class="fas fa-home" style="color: var(--accent);"></i> Home</a></li>
-      <li class="drawer-item-dropdown">
-        <a onclick="handleDrawerNav('temple-packages')" id="drawer-packages"><i class="fas fa-map-marked-alt" style="color: var(--accent);"></i> Tour Packages</a>
-        <ul class="drawer-submenu">
+      <li class="drawer-item-dropdown" id="drawer-dropdown-item">
+        <a onclick="toggleMobileSubmenu(event)" id="drawer-packages" style="cursor: pointer;">
+          <i class="fas fa-map-marked-alt" style="color: var(--accent);"></i>
+          <span>Tour Packages</span>
+          <i class="fas fa-chevron-down drawer-chevron" style="margin-left: auto; font-size: 11px; transition: transform 0.3s ease;"></i>
+        </a>
+        <ul class="drawer-submenu" id="drawer-submenu">
           <li>
             <a onclick="handleDrawerSubNav('temple')">
               <i class="fas fa-gopuram" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Temple Tour Packages
@@ -349,27 +353,6 @@
 
       </div>
     </section>
-
-    <div class="stats-bar">
-      <div class="container stats-grid">
-        <div class="stat-item">
-          <h3>15+</h3>
-          <p>Years of Service</p>
-        </div>
-        <div class="stat-item">
-          <h3>60,000+</h3>
-          <p>Devotees & Tourists Served</p>
-        </div>
-        <div class="stat-item">
-          <h3>100%</h3>
-          <p>Verified Chauffeurs</p>
-        </div>
-        <div class="stat-item">
-          <h3>4.9 ★</h3>
-          <p>Google Verified Rating</p>
-        </div>
-      </div>
-    </div>
 
     <section class="section">
       <div class="container">
