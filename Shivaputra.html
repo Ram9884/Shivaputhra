@@ -894,50 +894,59 @@
     display: block;
   }
 
-  /* Dynamic mobile height with vertical distribution */
+  /* Dynamic mobile hero layout with spacious vertical rhythm */
   .hero-slider-wrapper {
     height: calc(100svh - 58px) !important;
-    min-height: calc(100svh - 58px) !important;
-    max-height: calc(100svh - 58px) !important;
+    min-height: 520px !important;
     display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-around !important; /* Naturally spreads top, middle, and bottom content */
     align-items: center !important;
-    padding: 30px 18px 24px !important;
+    justify-content: center !important;
+    padding: 24px 16px !important;
   }
 
   .hero-inner-content {
+    width: 100% !important;
     max-width: 100% !important;
     padding: 0 !important;
+  }
+
+  .hero-text-block.active-text {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 14px !important;       /* Consistent vertical rhythm without tight clumps */
+    text-align: center !important;
+    width: 100% !important;
   }
 
   .trust-tag-strip {
-    font-size: 10.5px !important;
-    padding: 6px 12px !important;
-    gap: 6px !important;
-    margin-bottom: 8px !important;
+    font-size: 11px !important;
+    padding: 7px 14px !important;
+    gap: 8px !important;
+    margin-bottom: 18px !important;
     width: auto !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: inline-flex !important;
   }
 
   .hero-inner-content h1 {
     font-size: 26px !important;
-    line-height: 1.3 !important;
-    letter-spacing: 0.2px !important;
-    margin-bottom: 6px !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.3px !important;
+    margin-bottom: 14px !important;
     padding: 0 4px !important;
+    color: #ffffff !important;
   }
 
   .hero-inner-content p {
-    font-size: 13.5px !important;
-    line-height: 1.55 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
     color: #e2e8f0 !important;
-    max-width: 95% !important;
-    margin: 0 0 14px !important;
+    max-width: 90% !important;
+    margin: 0 auto 26px !important;
   }
 
   .hero-btn-group {
@@ -945,14 +954,17 @@
     flex-direction: column !important;
     width: 100% !important;
     max-width: 320px !important;
-    gap: 10px !important;
+    margin: 0 auto !important;
+    gap: 12px !important;
   }
 
+  .hero-btn-group .btn,
   .hero-inner-content .btn {
     width: 100% !important;
     padding: 13px 18px !important;
     font-size: 14px !important;
     justify-content: center !important;
+    border-radius: 10px !important;
   }
 
   /* 2. Standalone Booking Section Directly Below (100% visible on first scroll) */
@@ -1114,60 +1126,7 @@
   color: var(--accent);
 }
 
-/* ================================================= */
-/* PROPORTIONAL MOBILE HERO (BALANCED, NOT CONGESTED)*/
-/* ================================================= */
-@media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: block;
-  }
 
-  /* Spacious, well-proportioned Hero */
-  /* Mobile stays full screen, desktop stays 480px */
-  @media (max-width: 768px) {
-    .hero-slider-wrapper {
-      height: calc(100svh - 58px) !important;
-      min-height: calc(100svh - 58px) !important;
-      max-height: calc(100svh - 58px) !important;
-    }
-  }
-  .hero-inner-content {
-    padding: 38px 18px 40px !important;
-  }
-  .trust-tag-strip {
-    font-size: 11px !important;
-    padding: 5px 14px !important;
-    gap: 8px !important;
-    margin-bottom: 14px !important;
-  }
-  .hero-inner-content h1 {
-    font-size: 24px !important;
-    line-height: 1.35 !important;
-    margin-bottom: 12px !important;
-  }
-  .hero-inner-content p {
-    font-size: 13px !important;
-    line-height: 1.55 !important;
-    margin-bottom: 20px !important;
-    display: block !important; /* Removes harsh line truncation */
-  }
-  .hero-inner-content .btn {
-    padding: 11px 18px !important;
-    font-size: 13px !important;
-  }
-
-  /* Booking engine breathing room */
-  .booking-section {
-    padding: 30px 14px 40px !important;
-  }
-  .booking-card {
-    padding: 24px 18px !important;
-  }
-
-  body {
-    padding-bottom: 80px !important;
-  }
-}
 
 /* Plan Your Journey Category Selector Pills */
 .booking-category-pills {
@@ -1315,13 +1274,13 @@
             <span>•</span>
             <span style="color: var(--whatsapp);"><i class="fas fa-pray"></i> AARUPADAI VEEDU</span>
           </div>
-          <h1 class="brand-font" style="font-size: 42px; line-height: 1.25; margin-bottom: 16px; color: #ffffff;">
+          <h1 class="brand-font">
             Temple Tour Packages
           </h1>
-          <p style="font-size: 16px; color: #e2e8f0; max-width: 760px; margin: 0 auto 28px; line-height: 1.6;">
+          <p>
             Peaceful family pilgrimages to Tirupati, Navagraha, Thiruvannamalai, and Sabarimala with senior-citizen assistance and experienced chauffeurs.
           </p>
-          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <div class="hero-btn-group">
             <button class="btn btn-accent" onclick="switchTourTab('temple')">
               <i class="fas fa-gopuram"></i> View Temple Packages
             </button>
@@ -1339,13 +1298,13 @@
             <span>•</span>
             <span style="color: var(--whatsapp);"><i class="fas fa-umbrella-beach"></i> PONDICHERRY ECR</span>
           </div>
-          <h1 class="brand-font" style="font-size: 42px; line-height: 1.25; margin-bottom: 16px; color: #ffffff;">
+          <h1 class="brand-font">
             Holiday Packages & Hill Escapes
           </h1>
-          <p style="font-size: 16px; color: #e2e8f0; max-width: 760px; margin: 0 auto 28px; line-height: 1.6;">
+          <p>
             All-inclusive leisure tours covering fuel, permit, parking, and toll fees with drivers experienced in mountain hairpin turns.
           </p>
-          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <div class="hero-btn-group">
             <button class="btn btn-accent" onclick="switchTourTab('holiday')">
               <i class="fas fa-compass"></i> View Holiday Packages
             </button>
@@ -1363,13 +1322,13 @@
             <span>•</span>
             <span style="color: var(--whatsapp);"><i class="fas fa-receipt"></i> 100% GST COMPLIANT</span>
           </div>
-          <h1 class="brand-font" style="font-size: 42px; line-height: 1.25; margin-bottom: 16px; color: #ffffff;">
+          <h1 class="brand-font">
             Corporate Fleet & Executive Bookings
           </h1>
-          <p style="font-size: 16px; color: #e2e8f0; max-width: 760px; margin: 0 auto 28px; line-height: 1.6;">
+          <p>
             Premium chauffeured sedans, Innova Hycross, and luxury vans for VIP airport transfers, delegate visits, and centralized monthly billing.
           </p>
-          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <div class="hero-btn-group">
             <button class="btn btn-accent" onclick="showPage('corporate')">
               <i class="fas fa-building"></i> Corporate Rate Deck
             </button>
@@ -1387,13 +1346,13 @@
             <span>•</span>
             <span style="color: var(--whatsapp);"><i class="fas fa-home"></i> DOORSTEP PICKUP</span>
           </div>
-          <h1 class="brand-font" style="font-size: 42px; line-height: 1.25; margin-bottom: 16px; color: #ffffff;">
+          <h1 class="brand-font">
             Local Chennai City Rental
           </h1>
-          <p style="font-size: 16px; color: #e2e8f0; max-width: 760px; margin: 0 auto 28px; line-height: 1.6;">
+          <p>
             Hourly vehicle packages across Chennai for family functions, airport pickups, shopping, business meetings, and local sightseeing.
           </p>
-          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <div class="hero-btn-group">
             <a href="#fleet-section" class="btn btn-accent">
               <i class="fas fa-car"></i> View City Fleet Tariff
             </a>
