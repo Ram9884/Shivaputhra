@@ -33,7 +33,23 @@
       <!-- Desktop Links -->
       <ul class="nav-links">
         <li><a onclick="showPage('home')" id="nav-home" class="active"><i class="fas fa-home" style="font-size: 13px;"></i> Home</a></li>
-        <li><a onclick="showPage('packages')" id="nav-packages"><i class="fas fa-map-marked-alt" style="font-size: 13px;"></i> Tour Packages</a></li>
+        <li class="nav-item-dropdown">
+          <a onclick="showPage('packages')" id="nav-packages">
+            <i class="fas fa-map-marked-alt" style="font-size: 13px;"></i> Tour Packages <i class="fas fa-chevron-down dropdown-arrow" style="font-size: 10px; margin-left: 2px;"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a onclick="switchTourTab('temple')">
+                <i class="fas fa-gopuram" style="color: var(--accent); width: 18px;"></i> Temple Tour Packages
+              </a>
+            </li>
+            <li>
+              <a onclick="switchTourTab('holiday')">
+                <i class="fas fa-umbrella-beach" style="color: var(--accent); width: 18px;"></i> Holiday Tours
+              </a>
+            </li>
+          </ul>
+        </li>
         <li><a onclick="showPage('corporate')" id="nav-corporate"><i class="fas fa-briefcase" style="font-size: 13px;"></i> Corporate Bookings</a></li>
         <li><a onclick="showPage('about')" id="nav-about"><i class="fas fa-info-circle" style="font-size: 13px;"></i> About Us</a></li>
       </ul>
@@ -70,7 +86,21 @@
 
     <ul class="drawer-links">
       <li><a onclick="handleDrawerNav('home')" id="drawer-home" class="active"><i class="fas fa-home" style="color: var(--accent);"></i> Home</a></li>
-      <li><a onclick="handleDrawerNav('packages')" id="drawer-packages"><i class="fas fa-map-marked-alt" style="color: var(--accent);"></i> Tour Packages</a></li>
+      <li class="drawer-item-dropdown">
+        <a onclick="handleDrawerNav('packages')" id="drawer-packages"><i class="fas fa-map-marked-alt" style="color: var(--accent);"></i> Tour Packages</a>
+        <ul class="drawer-submenu">
+          <li>
+            <a onclick="handleDrawerSubNav('temple')">
+              <i class="fas fa-gopuram" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Temple Tour Packages
+            </a>
+          </li>
+          <li>
+            <a onclick="handleDrawerSubNav('holiday')">
+              <i class="fas fa-umbrella-beach" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Holiday Tours
+            </a>
+          </li>
+        </ul>
+      </li>
       <li><a onclick="handleDrawerNav('corporate')" id="drawer-corporate"><i class="fas fa-briefcase" style="color: var(--accent);"></i> Corporate Bookings</a></li>
       <li><a onclick="handleDrawerNav('about')" id="drawer-about"><i class="fas fa-info-circle" style="color: var(--accent);"></i> About Us</a></li>
     </ul>

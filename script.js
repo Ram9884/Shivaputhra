@@ -21,7 +21,7 @@ function showPage(pageId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// 2. Package Filter Switcher (Temple vs Holiday)
+// 2. Package Filter Switcher (Temple vs Holiday vs All)
 function filterPackages(category) {
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
   const btn = document.getElementById('filter-' + category);
@@ -41,9 +41,13 @@ function filterPackages(category) {
 
 function switchTourTab(category) {
   showPage('packages');
-  setTimeout(() => {
-    filterPackages(category);
-  }, 50);
+  filterPackages(category);
+  const filterTabs = document.querySelector('.filter-tabs');
+  if (filterTabs) {
+    const yOffset = -90;
+    const y = filterTabs.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
 }
 
 // 3. Central WhatsApp Link Dispatcher
@@ -223,6 +227,11 @@ function toggleMobileMenu(isOpen) {
 function handleDrawerNav(pageId) {
   toggleMobileMenu(false);
   showPage(pageId);
+}
+
+function handleDrawerSubNav(category) {
+  toggleMobileMenu(false);
+  switchTourTab(category);
 }
 
 // Close drawer on Escape key press
