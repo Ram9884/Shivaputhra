@@ -2097,9 +2097,9 @@
     margin-top: 6px !important;
   }
 
-  /* Clear space above fixed bottom bar */
+  /* Remove extra bottom padding below footer */
   body {
-    padding-bottom: 85px !important;
+    padding-bottom: 0 !important;
   }
 }
 
