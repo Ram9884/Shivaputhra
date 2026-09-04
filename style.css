@@ -441,8 +441,9 @@
   .trust-tag-strip {
     display: inline-flex;
     align-items: center;
-    gap: 16px;
-    padding: 8px 24px;
+    justify-content: center;
+    gap: 18px;
+    padding: 9px 26px;
     border-radius: 30px;
     background: rgba(10, 25, 47, 0.65);
     backdrop-filter: blur(8px);
@@ -452,15 +453,30 @@
     margin-bottom: 28px;
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
   }
-  .trust-tag-strip i {
-    margin-right: 6px;
-  }
-  .trust-tag-strip span {
+  .trust-tag-strip .tag-item {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    text-align: left;
     white-space: nowrap;
+  }
+  .trust-tag-strip .tag-item i {
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .trust-tag-strip .tag-text {
+    display: inline-block;
+    line-height: 1.2;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+  }
+  .trust-tag-strip .tag-bullet {
+    opacity: 0.6;
+    font-size: 13px;
   }
 
   .hero-inner-content h1 {
@@ -1805,23 +1821,36 @@
   }
 
   .trust-tag-strip {
-    font-size: 12px !important;
-    padding: 8px 18px !important;
-    gap: 10px !important;
-    margin-bottom: 28px !important;
+    font-size: 11.5px !important;
+    padding: 7px 14px !important;
+    gap: 8px 10px !important;
+    margin-bottom: 24px !important;
     width: auto !important;
-    max-width: 100% !important;
+    max-width: 98% !important;
     text-align: center !important;
     justify-content: center !important;
     display: inline-flex !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     border-radius: 24px !important;
+    white-space: nowrap !important;
   }
-  .trust-tag-strip span {
+  .trust-tag-strip .tag-item {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
+    gap: 5px !important;
+    text-align: left !important;
     white-space: nowrap !important;
+  }
+  .trust-tag-strip .tag-item i {
+    font-size: 13.5px !important;
+  }
+  .trust-tag-strip .tag-text {
+    display: inline-block !important;
+    line-height: 1.18 !important;
+    text-align: left !important;
+    font-size: 10.5px !important;
+    letter-spacing: 0.1px !important;
+    font-weight: 700 !important;
   }
 
   .hero-inner-content h1 {
