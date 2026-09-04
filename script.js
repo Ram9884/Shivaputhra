@@ -5,49 +5,51 @@ function showPage(pageId) {
   document.querySelectorAll('.page').forEach(page => {
     page.classList.remove('active-page');
   });
-  const target = document.getElementById('page-' + pageId);
+
+  // Alias 'packages' to 'temple-packages' as primary default
+  let actualPageId = pageId;
+  if (pageId === 'packages') actualPageId = 'temple-packages';
+
+  const target = document.getElementById('page-' + actualPageId);
   if (target) target.classList.add('active-page');
 
   // Update Desktop Nav active indicator
   document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
-  const activeNav = document.getElementById('nav-' + pageId);
+  let activeNavId = 'nav-' + actualPageId;
+  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages') {
+    activeNavId = 'nav-packages';
+  }
+  const activeNav = document.getElementById(activeNavId);
   if (activeNav) activeNav.classList.add('active');
 
   // Update Mobile Drawer Nav active indicator
   document.querySelectorAll('.drawer-links a').forEach(link => link.classList.remove('active'));
-  const activeDrawerNav = document.getElementById('drawer-' + pageId);
+  let activeDrawerId = 'drawer-' + actualPageId;
+  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages') {
+    activeDrawerId = 'drawer-packages';
+  }
+  const activeDrawerNav = document.getElementById(activeDrawerId);
   if (activeDrawerNav) activeDrawerNav.classList.add('active');
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// 2. Package Filter Switcher (Temple vs Holiday vs All)
+// Package Category Switcher
 function filterPackages(category) {
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  const btn = document.getElementById('filter-' + category);
-  if (btn) btn.classList.add('active');
-
-  const items = document.querySelectorAll('.filterable-item');
-  items.forEach(item => {
-    if (category === 'all') {
-      item.style.display = 'flex';
-    } else if (item.classList.contains('item-' + category)) {
-      item.style.display = 'flex';
-    } else {
-      item.style.display = 'none';
-    }
-  });
+  switchTourTab(category);
 }
 
 function switchTourTab(category) {
-  showPage('packages');
-  filterPackages(category);
-  const filterTabs = document.querySelector('.filter-tabs');
-  if (filterTabs) {
-    const yOffset = -90;
-    const y = filterTabs.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
+  if (category === 'holiday') {
+    showPage('holiday-packages');
+  } else {
+    showPage('temple-packages');
   }
+}
+
+function handleDrawerSubNav(category) {
+  toggleMobileMenu(false);
+  switchTourTab(category);
 }
 
 // 3. Central WhatsApp Link Dispatcher

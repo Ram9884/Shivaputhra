@@ -34,17 +34,17 @@
       <ul class="nav-links">
         <li><a onclick="showPage('home')" id="nav-home" class="active"><i class="fas fa-home" style="font-size: 13px;"></i> Home</a></li>
         <li class="nav-item-dropdown">
-          <a onclick="showPage('packages')" id="nav-packages">
+          <a onclick="showPage('temple-packages')" id="nav-packages">
             <i class="fas fa-map-marked-alt" style="font-size: 13px;"></i> Tour Packages <i class="fas fa-chevron-down dropdown-arrow" style="font-size: 10px; margin-left: 2px;"></i>
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a onclick="switchTourTab('temple')">
+              <a onclick="showPage('temple-packages')">
                 <i class="fas fa-gopuram" style="color: var(--accent); width: 18px;"></i> Temple Tour Packages
               </a>
             </li>
             <li>
-              <a onclick="switchTourTab('holiday')">
+              <a onclick="showPage('holiday-packages')">
                 <i class="fas fa-umbrella-beach" style="color: var(--accent); width: 18px;"></i> Holiday Tours
               </a>
             </li>
@@ -87,7 +87,7 @@
     <ul class="drawer-links">
       <li><a onclick="handleDrawerNav('home')" id="drawer-home" class="active"><i class="fas fa-home" style="color: var(--accent);"></i> Home</a></li>
       <li class="drawer-item-dropdown">
-        <a onclick="handleDrawerNav('packages')" id="drawer-packages"><i class="fas fa-map-marked-alt" style="color: var(--accent);"></i> Tour Packages</a>
+        <a onclick="handleDrawerNav('temple-packages')" id="drawer-packages"><i class="fas fa-map-marked-alt" style="color: var(--accent);"></i> Tour Packages</a>
         <ul class="drawer-submenu">
           <li>
             <a onclick="handleDrawerSubNav('temple')">
@@ -874,21 +874,26 @@
         </div>
       </div>
     </section>
+  </div>
 
-  </div> <div id="page-packages" class="page">
+  <div id="page-temple-packages" class="page">
     <div class="corp-banner" style="background: linear-gradient(rgba(10,25,47,0.88), rgba(10,25,47,0.88)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1500&q=80') center/cover;">
       <div class="container">
-        <h1 class="brand-font">Tour Packages</h1>
-        <p>Devotional Pilgrimages & Scenic Holiday Getaways with Innova Crysta & Tempo Traveller options. Inquire on WhatsApp for instant pricing & availability.</p>
+        <h1 class="brand-font"><i class="fas fa-gopuram" style="color: var(--accent); margin-right: 10px;"></i> Temple Tour Packages</h1>
+        <p>Devotional Pilgrimages & Sacred Yatra Circuit Tours across South India with Innova Crysta & Tempo Traveller options. Inquire on WhatsApp for instant quote.</p>
       </div>
     </div>
 
     <section class="section">
       <div class="container">
-        <div class="filter-tabs">
-          <button class="tab-btn active" id="filter-all" onclick="filterPackages('all')">All Packages (33)</button>
-          <button class="tab-btn" id="filter-temple" onclick="filterPackages('temple')"><i class="fas fa-om"></i> Temple Tour Packages (24)</button>
-          <button class="tab-btn" id="filter-holiday" onclick="filterPackages('holiday')"><i class="fas fa-mountain"></i> Holiday Tours (9)</button>
+        <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid var(--bg-light); padding-bottom: 16px;">
+          <div>
+            <h2 class="brand-font" style="font-size: 24px; color: var(--primary); margin: 0;">Spiritual & Pilgrimage Circuits (24)</h2>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin: 4px 0 0 0;">Dedicated luxury cabs for Tirupati, Sabarimala, Navagraha, Aarupadai Veedu & more.</p>
+          </div>
+          <button class="btn btn-outline" onclick="showPage('holiday-packages')" style="font-size: 13px; padding: 8px 16px;">
+            <i class="fas fa-mountain" style="color: var(--accent);"></i> View Holiday Tours ➔
+          </button>
         </div>
 
         <div class="packages-grid">
@@ -1348,6 +1353,32 @@
             </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="page-holiday-packages" class="page">
+    <div class="corp-banner" style="background: linear-gradient(rgba(10,25,47,0.88), rgba(10,25,47,0.88)), url('https://images.unsplash.com/photo-1593692716621-1e228b0a9224?fm=jpg&q=60&w=3000&auto=format&fit=crop') center/cover;">
+      <div class="container">
+        <h1 class="brand-font"><i class="fas fa-umbrella-beach" style="color: var(--accent); margin-right: 10px;"></i> Holiday Tours</h1>
+        <p>Scenic Hill Station Getaways & Coastal Beach Retreats with Chauffeur-Driven Luxury Fleet. All-inclusive pricing covering fuel, toll, permit & driver batta.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid var(--bg-light); padding-bottom: 16px;">
+          <div>
+            <h2 class="brand-font" style="font-size: 24px; color: var(--primary); margin: 0;">Leisure & Scenic Getaways (9)</h2>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin: 4px 0 0 0;">Comfortable outstation trips to Ooty, Kodaikanal, Munnar, Pondicherry, Mysore & Coorg.</p>
+          </div>
+          <button class="btn btn-outline" onclick="showPage('temple-packages')" style="font-size: 13px; padding: 8px 16px;">
+            <i class="fas fa-gopuram" style="color: var(--accent);"></i> View Temple Packages ➔
+          </button>
+        </div>
+
+        <div class="packages-grid">
           <div class="pkg-card filterable-item item-holiday">
             <div class="pkg-body">
               <span class="pkg-tag" style="position:static; width:fit-content; margin-bottom:8px; background:#059669;">Holiday Tour</span>
@@ -2001,9 +2032,8 @@
           <h4>Navigation</h4>
           <ul class="footer-links">
             <li><a onclick="showPage('home')"><i class="fas fa-chevron-right"></i> Home Page</a></li>
-            <li><a onclick="showPage('packages')"><i class="fas fa-chevron-right"></i> All Tour Packages</a></li>
-            <li><a onclick="switchTourTab('temple')"><i class="fas fa-chevron-right"></i> Temple Pilgrimages</a></li>
-            <li><a onclick="switchTourTab('holiday')"><i class="fas fa-chevron-right"></i> Holiday Hill Stations</a></li>
+            <li><a onclick="showPage('temple-packages')"><i class="fas fa-chevron-right"></i> Temple Tour Packages</a></li>
+            <li><a onclick="showPage('holiday-packages')"><i class="fas fa-chevron-right"></i> Holiday Tours</a></li>
             <li><a onclick="showPage('corporate')"><i class="fas fa-chevron-right"></i> Corporate Cab Rentals</a></li>
             <li><a onclick="showPage('about')"><i class="fas fa-chevron-right"></i> About Our Fleet</a></li>
           </ul>
