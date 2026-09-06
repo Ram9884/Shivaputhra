@@ -82,12 +82,10 @@ function enquireVehicle(vehicleName) {
 // 5.5 Category Tour Packages Switcher for Plan Your Journey
 const BOOKING_TOUR_OPTIONS = {
   tirupati: [
-    { val: "Chennai to Tirupati Express VIP Balaji Darshan (1 Day)", label: "Tirupati VIP Balaji Darshan (1 Day Express)" },
-    { val: "Tirupati - Kalahasti - Kanipakam Divine Yatra (2 Days)", label: "Tirupati - Kalahasti - Kanipakam (2 Days)" },
-    { val: "Tirupati VIP Darshan by Innova Crysta", label: "Tirupati Innova Crysta VIP Package" },
-    { val: "Tirupati Group Yatra by Tempo Traveller", label: "Tirupati Tempo Traveller / Urbania Group Yatra" },
-    { val: "Chennai Airport to Tirupati Direct Balaji Yatra", label: "Chennai Airport Direct Tirupati Yatra" },
-    { val: "Tirupati - Golden Temple Vellore - Kanchipuram Yatra", label: "Tirupati + Golden Temple + Kanchipuram Yatra" }
+    { val: "Chennai to Tirupati 1 Day (All-Inclusive with Food & 300 Tickets)", label: "Chennai to Tirupati 1 Day (Food + 300 Tickets + Transport)" },
+    { val: "Chennai to Tirupati and Padmavathi Temple (2 Days / 1 Night Transport Only)", label: "Chennai ➔ Tirupati ➔ Padmavathi (2D/1N Transport Only)" },
+    { val: "Chennai to Tirupati - Padmavathi - Srikalahasti (2 Days / 1 Night Transport Only)", label: "Chennai ➔ Tirupati ➔ Padmavathi ➔ Srikalahasti (2D/1N Transport)" },
+    { val: "Chennai to Sri Kalahasthi Temple Tour (1 Day / 2 Days)", label: "Chennai to Sri Kalahasthi Tour (1 Day / 2 Days)" }
   ],
   temple: [
     { val: "Grand South Indian Temple Tour (10 Days / 9 Nights)", label: "Grand South Indian Temple Tour (10 Days / 9 Nights) ⭐" },
