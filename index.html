@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Oregano:ital@0;1&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -369,6 +369,11 @@
 
       <div class="hero-inner-content">
 
+        <!-- Prominent Brand Headline in Signature Script Logo Typography -->
+        <div class="hero-top-brand-wrap">
+          <span class="hero-top-brand">Shivaputhra Travels</span>
+        </div>
+
         <div class="hero-text-block active-text">
           <div class="trust-tag-strip">
             <span class="tag-item" style="color: var(--accent-gold);"><i class="fas fa-om"></i><span
@@ -665,7 +670,7 @@
         </div>
 
         <div class="fleet-filter-bar">
-          <button class="fleet-tab-btn active" onclick="filterFleet('all', this)">All Vehicles (13)</button>
+          <button class="fleet-tab-btn active" onclick="filterFleet('all', this)">All Vehicles (14)</button>
           <button class="fleet-tab-btn" onclick="filterFleet('sedan', this)">Sedan</button>
           <button class="fleet-tab-btn" onclick="filterFleet('suv', this)">SUV/MPV</button>
           <button class="fleet-tab-btn" onclick="filterFleet('premium-mpv', this)">Premium MPV's</button>
@@ -991,7 +996,40 @@
             </div>
           </div>
 
-          <!-- 11. Force Urbania -->
+          <!-- 11. Toyota Vellfire -->
+          <div class="vehicle-card fleet-item fleet-luxury">
+            <div class="vehicle-img-wrap">
+              <img src="images/toyota_vellfire.png" alt="Toyota Vellfire" loading="lazy" />
+            </div>
+            <div class="vehicle-header">
+              <div class="vehicle-badge-row">
+                <span class="cat-pill" style="color: #7c3aed;"><i class="fas fa-crown"></i> Luxury Car</span>
+                <span class="seat-pill"><i class="fas fa-couch"></i> 7 Seater VIP</span>
+              </div>
+              <h3 class="vehicle-title">Toyota Vellfire</h3>
+            </div>
+            <div class="tariff-table-wrap">
+              <div class="tariff-row"><span class="tariff-label">Local (4 Hrs / 40 Kms)</span><span
+                  class="tariff-val">₹22,000</span></div>
+              <div class="tariff-row"><span class="tariff-label">Local (8 Hrs / 80 Kms)</span><span
+                  class="tariff-val">₹22,000</span></div>
+              <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
+                  class="tariff-val">₹2,200/hr • ₹220/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
+                  class="tariff-val highlight">₹220 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000
+                  /
+                  Day</strong></div>
+            </div>
+            <div class="vehicle-card-footer">
+              <button class="btn btn-whatsapp" style="width: 100%;"
+                onclick="bookFleetVehicle('Toyota Vellfire (VIP Luxury MPV)')">
+                <i class="fab fa-whatsapp"></i> Book Toyota Vellfire
+              </button>
+            </div>
+          </div>
+
+          <!-- 12. Force Urbania -->
           <div class="vehicle-card fleet-item fleet-vans">
             <div class="vehicle-img-wrap">
               <img src="images/force_urbania.png" alt="Force Urbania" loading="lazy" />
@@ -1660,7 +1698,7 @@
           <!-- ================= TAMIL NADU (TN) TEMPLE PACKAGES ================= -->
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=800&q=80"
+              <img src="https://www.sblt.co.in/blog/wp-content/uploads/2026/02/Aarupadai-Veedu.jpg"
                 alt="Chennai to Aarupadai Veedu Murugan Tour" loading="lazy" />
               <span class="pkg-tag pkg-img-badge"><i class="fas fa-om"></i> Murugan Special • TN</span>
             </div>
@@ -1684,7 +1722,7 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1600100397608-f010f443b784?auto=format&fit=crop&w=800&q=80"
+              <img src="https://c9admin.cottage9.com/uploads/5017/thiruchendur-murugan-temple-a-historical-overview.jpg"
                 alt="Chennai to Thiruchendur Murugan Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge"><i class="fas fa-gopuram"></i> Temple Package • TN</span>
             </div>
@@ -1707,7 +1745,7 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?auto=format&fit=crop&w=800&q=80"
+              <img src="https://public.temples.bio/img/temple_tags/kubmakonam-navagraha-temples.jpg"
                 alt="Chennai to Navagraha Temples Kumbakonam" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #7c3aed;"><i class="fas fa-sun"></i> Planetary
                 Trail • TN</span>
@@ -1732,7 +1770,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvfU_lZ9ByCqxiYmjDgyRKTnZW5zUm7HyMY0Bhls_N72nB7RVtDlv7eVM&s=10"
                 alt="Chennai to Thiruvannamalai Arunachaleswarar Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: var(--accent);"><i class="fas fa-fire"></i> Shiva
                 Special • TN</span>
@@ -1756,7 +1795,7 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80"
+              <img src="https://i.pinimg.com/474x/b9/fe/1f/b9fe1f4c50660324953a417437609a13.jpg"
                 alt="Chennai to Thirunallar Saneeswara Swamy Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #1e293b;"><i class="fas fa-shield-alt"></i> Shani
                 Parihara • TN</span>
@@ -1780,7 +1819,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAWESmHl8I0LoNvMLhI8mJvUMCSJlZH1eqRkRVblIk2ncNiCLqZRh23TY&s=10"
                 alt="Chennai to Vaitheeswaran Koil Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge"><i class="fas fa-gopuram"></i> Temple Package • TN</span>
             </div>
@@ -1804,7 +1844,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://www.soil2soulexpeditions.com/admin/public/images/blog/image_file/140/kanchipuram%2011.png"
                 alt="Chennai to Kanchipuram Temples" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #0284c7;"><i class="fas fa-gopuram"></i> Temple
                 Package • TN</span>
@@ -1829,7 +1870,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1588096344356-9a4f48b99c73?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn3VTF7FSsCwYnLS1xkWV3-33u4JiESYc94LKKFNk-2rWwofuAavtpvesV&s=10"
                 alt="Chennai to Mayiladuthurai Temples" loading="lazy" />
               <span class="pkg-tag pkg-img-badge"><i class="fas fa-gopuram"></i> Temple Package • TN</span>
             </div>
@@ -1853,7 +1895,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1600100397608-f010f443b784?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWQNl44sqKcBUfdzQ5T9WNCxl2Mv9shWo29k_20ctKyGoVweOfiU9UgjH4&s=10"
                 alt="Chennai to Melmaruvathur Siddhar Peedam" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #dc2626;"><i class="fas fa-om"></i> Shakthi Peedam
                 • TN</span>
@@ -1877,7 +1920,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Thirukadayur_%287%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
                 alt="Chennai to Thirukadaiyur Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #d97706;"><i class="fas fa-hands"></i> Ayushya
                 Homam • TN</span>
@@ -1902,7 +1946,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwn5ZpYOnNuVKKXCMLq0g44wFdvXs-tlyxGnD4C1afi9MhOmpC8LRMLZI&s=10"
                 alt="Chennai to Panchabootha Sthalam Temples" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #4f46e5;"><i class="fas fa-atom"></i> Five Elements
                 • TN & AP</span>
@@ -1928,7 +1973,8 @@
           <!-- ================= ANDHRA PRADESH (AP) TEMPLE PACKAGES ================= -->
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/46/5c/56/temple-building-view.jpg?w=1200&h=1200&s=1"
                 alt="Chennai to Mantralayam Raghavendra Mutt" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #059669;"><i class="fas fa-place-of-worship"></i>
                 Guru Kshetram • AP</span>
@@ -1952,7 +1998,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVKigQh6Y7bLa6-qOeA-Dw_jYgQPWsldXAPj_BMOZysqq_4iNMmzpN6oo&s=10"
                 alt="Chennai to Ahobilam Nava Narasimha Temples" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #b45309;"><i class="fas fa-gopuram"></i> Nava
                 Narasimha • AP</span>
@@ -1976,7 +2023,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://hblimg.mmtcdn.com/content/hubble/img/img/mmt/activities/m_Bhramaramba_Mallikarjuna_Swamy_varla_Devasthanam_l_333_550.jpg"
                 alt="Chennai to Srisailam Mallikarjuna Swamy Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #db2777;"><i class="fas fa-om"></i> Jyotirlinga &
                 Shakthi Peetha • AP</span>
@@ -2001,7 +2049,8 @@
           <!-- ================= KERALA TEMPLE PACKAGES ================= -->
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1593692716621-1e228b0a9224?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://www.keralatourism.org/uploads/sabarimala/mobile/sannidhanam-general-without-crowd-2-20241005111519500359.webp"
                 alt="Chennai to Sabarimala Ayyappan Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #0f766e;"><i class="fas fa-mountain"></i> Temple
                 Package • Kerala</span>
@@ -2025,7 +2074,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ZNUTju53TPSnBehijSQCTMEqjx73Iw5Oc_aA-RXiebOkL3tLaW_5Ojg&s=10"
                 alt="Chennai to Sabarimala Extended Pilgrimage" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #0f766e;"><i class="fas fa-mountain"></i> Temple
                 Package • Kerala</span>
@@ -2049,7 +2099,7 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+              <img src="https://www.trawell.in/admin/images/upload/195856262Guruvayur_Temple.jpg"
                 alt="Chennai to Guruvayur Sri Krishna Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: #2563eb;"><i class="fas fa-om"></i> Kerala Special
                 • Kerala</span>
@@ -2073,7 +2123,8 @@
 
           <div class="pkg-card filterable-item item-temple">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://www.kalpongholidays.com/wp-content/uploads/2025/08/Rameshwaram-Temple-Tamil-nadu-temple-tour-package.jpg"
                 alt="Grand South Temple Circuit Rameswaram Madurai" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background: var(--accent);"><i class="fas fa-crown"></i> Grand
                 Pilgrimage</span>
@@ -2209,7 +2260,8 @@
 
           <div class="pkg-card filterable-item item-holiday">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1621831971712-40f4eb60adbf?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR06ia_58BUk9z6Edq9n1IPVNY_DY92dXAQ7Et40dxyTRMn1um0ohyHjdkd&s=10"
                 alt="Chennai to Mahabalipuram Shore Temple & Pondicherry" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background:#059669;"><i class="fas fa-map-signs"></i> 2 Days
                 Tour</span>
@@ -2234,7 +2286,8 @@
 
           <div class="pkg-card filterable-item item-holiday">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlzwlWTE0eEcWwU8w3lxegXQNoeaEBnULz0ti8aR2mG35rmpGEZuZJvvI&s=10"
                 alt="Mahabalipuram UNESCO World Heritage Shore Temple" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background:#059669;"><i class="fas fa-landmark"></i> Heritage
                 Drive</span>
@@ -2308,7 +2361,8 @@
 
           <div class="pkg-card filterable-item item-holiday">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1626014303758-618cd916c5ef?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCnGCMGz_Ll1OfhoyLNB790c8iEOPI727G-Ms3R8b-GAsau13zgElQk40&s=10"
                 alt="Ooty Nilgiri Tea Gardens & Hill Station" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background:#059669;"><i class="fas fa-tree"></i> Queen of
                 Hills</span>
@@ -2382,7 +2436,8 @@
 
           <div class="pkg-card filterable-item item-holiday">
             <div class="pkg-img-wrap">
-              <img src="https://images.unsplash.com/photo-1600100397608-f010f443b784?auto=format&fit=crop&w=800&q=80"
+              <img
+                src="https://karnatakatourism.org/_next/image/?url=https%3A%2F%2Fweb-cms.karnatakatourism.org%2Fwp-content%2Fuploads%2F2025%2F06%2FMysuru-Palace-banner-1920_1100.jpg&w=3840&q=75"
                 alt="Mysore Amba Vilas Palace Illumination" loading="lazy" />
               <span class="pkg-tag pkg-img-badge" style="background:#059669;"><i class="fas fa-crown"></i> Royal
                 Heritage</span>
@@ -3257,7 +3312,54 @@
             </div>
           </div>
 
-          <!-- 11. Force Urbania -->
+          <!-- 11. Toyota Vellfire -->
+          <div class="car-fleet-card-item" data-category="luxury">
+            <div class="vehicle-img-wrap">
+              <img src="images/toyota_vellfire.png" alt="Toyota Vellfire VIP Luxury MPV" loading="lazy" />
+            </div>
+            <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span
+                  style="font-size: 11px; font-weight: 800; color: #7c3aed; background: rgba(124,58,237,0.1); padding: 4px 10px; border-radius: 20px; text-transform: uppercase;">Luxury
+                  Car</span>
+                <span style="font-size: 12px; font-weight: 700; color: #64748b;"><i class="fas fa-couch"
+                    style="color: var(--accent);"></i> 7 Seater VIP</span>
+              </div>
+              <h3 style="font-size: 20px; font-family: var(--font-brand); color: var(--primary); margin: 4px 0 10px;">
+                Toyota Vellfire</h3>
+
+              <table class="car-tariff-table">
+                <tr>
+                  <td>Local (4 Hrs / 40 Kms)</td>
+                  <td class="rate-val">₹22,000</td>
+                </tr>
+                <tr>
+                  <td>Local (8 Hrs / 80 Kms)</td>
+                  <td class="rate-val">₹22,000</td>
+                </tr>
+                <tr>
+                  <td>Extra Hr / Extra Km</td>
+                  <td class="rate-val">₹2,200/hr • ₹220/km</td>
+                </tr>
+                <tr>
+                  <td>Outstation (Min 250 Km/Day)</td>
+                  <td class="rate-val">₹220 / Km</td>
+                </tr>
+                <tr>
+                  <td>Driver Allowance</td>
+                  <td class="rate-val">₹1,000 / Day</td>
+                </tr>
+              </table>
+
+              <button class="btn btn-whatsapp"
+                style="width: 100%; font-weight: 700; font-size: 13.5px; margin-top: auto; padding: 11px;"
+                onclick="openDirectWhatsApp('Hello Shivaputhra Travels, I want to book: Toyota Vellfire (VIP Luxury MPV)')">
+                <i class="fab fa-whatsapp"></i> Book Toyota Vellfire
+              </button>
+            </div>
+          </div>
+
+          <!-- 12. Force Urbania -->
           <div class="car-fleet-card-item" data-category="van">
             <div class="vehicle-img-wrap">
               <img src="images/force_urbania.png" alt="Force Urbania Van" loading="lazy" />
@@ -3432,6 +3534,7 @@
                   <option value="Tempo Traveller (12 / 14 / 18 / 26 Seater)">Tempo Traveller (12 / 14 / 18 / 26 Seater)
                   </option>
                   <option value="Toyota Fortuner / Kia Carnival">Toyota Fortuner / Kia Carnival</option>
+                  <option value="Toyota Vellfire VIP Luxury MPV">Toyota Vellfire VIP Luxury MPV</option>
                   <option value="Mercedes-Benz E-Class / S-Class">Mercedes-Benz E-Class / S-Class</option>
                 </select>
               </div>
@@ -3851,7 +3954,8 @@
                   <option value="Executive SUVs (Innova Hycross / Crysta)">Executive SUVs (Innova Hycross / Crysta)
                   </option>
                   <option value="Luxury Vans (Force Urbania)">Luxury Vans (Force Urbania Recliner)</option>
-                  <option value="VIP Sedans (Camry / Mercedes E-Class)">VIP Sedans (Camry / Mercedes E-Class)</option>
+                  <option value="VIP Luxury (Toyota Vellfire / Mercedes E & S-Class)">VIP Luxury (Toyota Vellfire /
+                    Mercedes E & S-Class)</option>
                   <option value="Mini Coaches (21-32 Seater)">Mini Coaches (21 - 32 Seater)</option>
                   <option value="Luxury Volvo Buses (40+ Seater)">Luxury Volvo Buses (40+ Seater)</option>
                 </select>

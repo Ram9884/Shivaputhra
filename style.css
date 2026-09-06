@@ -551,9 +551,36 @@
     font-size: 13px;
   }
 
+  /* Prominent Brand Headline in Signature Script Logo Typography */
+  .hero-top-brand-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-top-brand {
+    font-family: 'Oregano', cursive;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(245, 158, 11, 0.65), 0 2px 10px rgba(0, 0, 0, 0.95), 0 6px 28px rgba(10, 25, 47, 0.9);
+    user-select: none;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .hero-top-brand:hover {
+    transform: scale(1.03);
+    text-shadow: 0 0 28px rgba(245, 158, 11, 0.85), 0 2px 12px rgba(0, 0, 0, 1);
+  }
+
   .hero-inner-content h1 {
-    font-size: 42px;
-    line-height: 1.22;
+    font-size: 38px;
+    line-height: 1.25;
     letter-spacing: 0.5px;
     margin-bottom: 22px;
     color: #ffffff;
@@ -2170,7 +2197,7 @@
       font-size: 11.5px !important;
       padding: 7px 14px !important;
       gap: 8px 10px !important;
-      margin-bottom: 24px !important;
+      margin-bottom: 22px !important;
       width: auto !important;
       max-width: 98% !important;
       text-align: center !important;
@@ -2202,11 +2229,21 @@
       font-weight: 700 !important;
     }
 
+    .hero-top-brand-wrap {
+      margin-bottom: 22px !important;
+    }
+
+    .hero-top-brand {
+      font-size: 42px !important;
+      letter-spacing: 1px !important;
+      line-height: 1.15 !important;
+    }
+
     .hero-inner-content h1 {
-      font-size: 29px !important;
-      line-height: 1.34 !important;
+      font-size: 26px !important;
+      line-height: 1.3 !important;
       letter-spacing: 0.3px !important;
-      margin-bottom: 24px !important;
+      margin-bottom: 18px !important;
       padding: 0 4px !important;
       color: #ffffff !important;
     }
